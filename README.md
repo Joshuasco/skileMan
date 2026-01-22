@@ -19,7 +19,7 @@ A high-performance, stateless authentication API built with **FastAPI** and **SQ
 
 1. **Clone the repository**:
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/Joshuasco/skileMan.git
    cd skileMan
 
 2. **Create a virtual environment**
