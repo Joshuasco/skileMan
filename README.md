@@ -10,6 +10,7 @@ A high-performance, stateless authentication API built with **FastAPI** and **SQ
 -   **Advanced Security**:
     -   **Argon2 Hashing**: Uses `pwdlib[argon2]` for password encryption (Algorithm Provides high level security over counterpats such as python-jose and bycrypt).
     -   **Stateless JWT**: Implements `pyjwt` for secure, scalable authentication tokens.
+-   **Version Provisioning**: The file structure was designed to support scalability and version provision that elvolves over time
 -   **Layered Architecture**: Decouples business logic from API routes using a **Service Layer** pattern and **Dependency Injection**.
 -   **Type-Safe Configuration**: Managed via `pydantic-settings` to ensure environment variables are validated at runtime.
 
