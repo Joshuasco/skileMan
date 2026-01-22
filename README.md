@@ -40,9 +40,9 @@ A high-performance, stateless authentication API built with **FastAPI** and **SQ
         echo > .env
 
     Replace the content of .env file with the conde snippet below:
-        SECRET_KEY="your_super_secret_key_here"
-        DATABASE_URL=sqlite:///./sql_app.db
-        ACCESS_TOKEN_EXPIRE_MINUTES=60
+     -   SECRET_KEY="my98secretyby?kiogwa323@6=key"
+     -   DATABASE_URL=sqlite:///./sql_app.db
+     -   ACCESS_TOKEN_EXPIRE_MINUTES=60
 
 ## Run the Application:
     Bash
@@ -59,7 +59,7 @@ Create User: The application automatically Creates a test user on first run, tha
     Password: password123
 
 ## To add more users: 
- -   Navigate to skileMan/main.py 
+ -   Navigate to skileMan/app/main.py 
  -   change the email and password
  -   quit and restart the server
 
