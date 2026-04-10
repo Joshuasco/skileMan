@@ -14,14 +14,14 @@ def get_password_hash(password: str) -> str:
     """Generates an Argon2 hash."""
     return password_hash.hash(password)
 
-def create_access_token(subject: str) -> str:
+def create_access_token(email: str) -> str:
     """Generates a JWT using pyjwt."""
     expire = datetime.now(timezone.utc) + timedelta(
         minutes=settings.ACCESS_TOKEN_EXPIRE_MINUTES
     )
     to_encode = {
         "exp": expire, 
-        "sub": str(subject),
+        "sub": str(email),
         "iat": datetime.now(timezone.utc) # Good practice: Issued At time
     }
     
@@ -59,14 +59,14 @@ def create_access_token(subject: str) -> str:
 #     """
 #     return pwd_context.hash(password)
 
-# def create_access_token(subject: Union[str, Any]) -> str:
+# def create_access_token(email: Union[str, Any]) -> str:
 #     """
 #     Generates a JWT for authenticated users.
 #     """
 #     expire = datetime.now(timezone.utc) + timedelta(
 #         minutes=settings.ACCESS_TOKEN_EXPIRE_MINUTES
 #     )
-#     to_encode = {"exp": expire, "sub": str(subject)}
+#     to_encode = {"exp": expire, "sub": str(email)}
 #     encoded_jwt = jwt.encode(
 #         to_encode, settings.SECRET_KEY, algorithm=settings.ALGORITHM
 #     )
